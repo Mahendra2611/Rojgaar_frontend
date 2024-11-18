@@ -35,13 +35,13 @@ const AdminJobCard = ({data,handleSave}) => {
               </ul>
             </div>
         {/* Buttons */}
-        <div className="flex justify-between gap-x-2 mt-6">
+        <div className="flex justify-center items-center gap-x-2 mt-6">
         <Button>
 <Link to={data.link}> Apply</Link>
 </Button>
-<Button onClick={()=>{handleSave(data?._id)}} >
+{/* <Button onClick={()=>{handleSave(data?._id)}} >
  Save for Later
-</Button>
+</Button> */}
         </div>
       </div>
     </div>
