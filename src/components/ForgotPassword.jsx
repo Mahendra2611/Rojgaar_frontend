@@ -15,6 +15,7 @@ console.log(email)
         console.log("handle submit called")
         const formData = {
             "email":email||"",
+            "resend":false,
         }
         console.log(formData)
     try {
