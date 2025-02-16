@@ -15,7 +15,7 @@ const user = useSelector((state)=>state.user.user)
 //console.log(isProfileMenuOpen)
   return (
    
-    <nav className="bg-gray-800 p-4  w-full ">
+    <nav className="bg-gray-800 p-4   w-[100vw] ">
       <div className="  mx-auto flex items-center justify-between">
         <img
           src={LOGO}
@@ -78,11 +78,11 @@ const user = useSelector((state)=>state.user.user)
   ) : (
      (
       <div className="inline-flex flex-wrap  gap-2 md:hidden mt-4">
-         <Link to="/logout" className="text-white rounded-xl  text-center py-2 px-4 bg-[#39b97d] shadow-[inset_5px_5px_5px_-1px_#20754e,inset_-5px_-5px_5px_-1px_#53e6a1]">Log Out</Link>
-         <Link to="/"className="text-white rounded-xl py-2 px-4 bg-[#3968ad] shadow-[inset_5px_5px_5px_-1px_#264d88,inset_-5px_-5px_5px_-1px_#5c88ca]">Home</Link>
-        <Link to="/user/savedjobs" className="text-white rounded-xl py-2 px-4 bg-[#3968ad] shadow-[inset_5px_5px_5px_-1px_#264d88,inset_-5px_-5px_5px_-1px_#5c88ca]">Saved Jobs</Link>
-        <Link to="/user/intern" className="text-white rounded-xl py-2 px-4 bg-[#3968ad] shadow-[inset_5px_5px_5px_-1px_#264d88,inset_-5px_-5px_5px_-1px_#5c88ca]">Internship</Link>
-        <Link to="/user/jobs" className="text-white rounded-xl py-2 px-4 bg-[#3968ad] shadow-[inset_5px_5px_5px_-1px_#264d88,inset_-5px_-5px_5px_-1px_#5c88ca]"> Jobs</Link>
+         <Link to="/logout" className="text-white rounded-xl  min-w-[45%] text-center py-2 px-4 bg-[#39b97d] shadow-[inset_5px_5px_5px_-1px_#20754e,inset_-5px_-5px_5px_-1px_#53e6a1]">Log Out</Link>
+         <Link to="/"className="text-white min-w-[45%] text-center rounded-xl py-2 px-4 bg-[#3968ad] shadow-[inset_5px_5px_5px_-1px_#264d88,inset_-5px_-5px_5px_-1px_#5c88ca]">Home</Link>
+        <Link to="/user/savedjobs" className="text-white min-w-[45%] text-center rounded-xl py-2 px-4 bg-[#3968ad] shadow-[inset_5px_5px_5px_-1px_#264d88,inset_-5px_-5px_5px_-1px_#5c88ca]">Saved Jobs</Link>
+        <Link to="/user/intern" className="text-white min-w-[45%] text-center rounded-xl py-2 px-4 bg-[#3968ad] shadow-[inset_5px_5px_5px_-1px_#264d88,inset_-5px_-5px_5px_-1px_#5c88ca]">Internship</Link>
+        <Link to="/user/jobs" className="text-white min-w-[45%] text-center rounded-xl py-2 px-4 bg-[#3968ad] shadow-[inset_5px_5px_5px_-1px_#264d88,inset_-5px_-5px_5px_-1px_#5c88ca]"> Jobs</Link>
       </div>
     )
   )

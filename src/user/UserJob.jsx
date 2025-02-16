@@ -78,16 +78,17 @@ const UserJob = () => {
     <div className='pb-5 m-auto w-full hide-scrollbar '>
       <div className='flex justify-center items-center px-10 py-5 text-black'>
       
-<input
+      <input
   type="text"
   placeholder="Search for jobs..."
-  className="w-full sm:w-auto px-4 py-2 text-[16px] sm:text-[18px] rounded-xl  
-             border-2 border-transparent bg-blue-300 text-black focus:border-blue-800
-             focus:ring-2 focus:ring-blue-300 transition-all duration-300 
+  className="w-full sm:w-[300px] px-4 py-2 text-[16px] sm:text-[18px] rounded-lg  
+             border-2 border-transparent bg-[#3862a5] text-[#f0f2f3] focus:border-[#4DA3FF]
+             focus:ring-2 focus:ring-[#4DA3FF] transition-all duration-300 
              shadow-md hover:shadow-lg outline-none 
-             placeholder-gray-500"
+             placeholder-[#94A3B8] hover:bg-[#24344D]"
   onChange={(e) => handleChange(e.target.value)}
 />
+
 
         {/* <Input placeholder='search by name or title' onChange={(e) => {
           handleChange(e.target.value)

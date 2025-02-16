@@ -4,33 +4,37 @@ import { Pattern1 } from "../components/Background";
 import Button from "../components/Button";
 import { calculateDays } from "../utils/calculateDays";
 
-const AdminJobCard = ({ data,handleSave }) => {
+const AdminJobCard = ({ data, handleSave }) => {
   const [showAll, setShowAll] = useState(false);
   const visibleSkills = 4; // Number of skills shown initially
 
   return (
-    <Pattern1>
+    
       <div className="flex justify-center items-center">
-        <div className="w-[250px] sm:w-[300px] h-[350px] border border-white/20 shadow-[inset_10px_10px_10px_-1px_#4d4e4e,inset_-10px_-10px_10px_-1px_#1f2020] 
-                        rounded-lg p-4 flex flex-col justify-between">
+        <div className="w-[260px] sm:w-[320px] h-[380px] border border-gray-600 shadow-lg bg-[#1A1B2F] 
+                        rounded-xl p-5 flex flex-col justify-between">
           
           {/* Days Posted */}
-          <p className="text-white text-right text-sm">{calculateDays(data.createdAt)} Days Ago</p>
+          <p className="text-gray-400 text-right text-sm">
+            {calculateDays(data.createdAt)} Days Ago
+          </p>
 
           {/* Job Info */}
           <div>
-            <h2 className="text-white text-xl font-bold">{data?.name}</h2>
-            <p className="text-gray-300 text-sm">{data?.location}</p>
-            <h3 className="text-white text-lg font-semibold mt-2">{data?.role}</h3>
-            <p className="text-white text-sm">{data?.mode} | {data?.jobType}</p>
+            <h2 className="text-[#F8F9FA] text-2xl font-bold">{data?.name}</h2>
+            <p className="text-[#ADB5BD] text-sm">{data?.location}</p>
+            <h3 className="text-[#F8F9FA] text-lg font-semibold mt-2">{data?.role}</h3>
+            <p className="text-[#ADB5BD] text-sm">
+              {data?.mode} | {data?.jobType}
+            </p>
           </div>
 
           {/* Requirements */}
-          <div className="mt-0">
-            <h3 className="text-lg text-white font-semibold">Requirements</h3>
-            <ul className="text-orange-300 flex flex-wrap gap-2 md:gap-3">
+          <div >
+            <h3 className="text-lg text-[#F8F9FA] font-semibold">Requirements</h3>
+            <ul className="text-[#56CFE1] flex flex-wrap mt-1 gap-2">
               {data?.skills?.slice(0, showAll ? data?.skills.length : visibleSkills).map((req, index) => (
-                <li key={index} className="border-2 border-white/20 py-1 px-2 text-xs rounded-xl bg-[#1e293b] shadow-[inset_5px_5px_5px_-1px_#32435f,inset_-5px_-5px_5px_-1px_#131c2b]">
+                <li key={index} className="border border-[#56CFE1] py-1 px-2 text-xs rounded-lg bg-[#2B2D42]">
                   {req}
                 </li>
               ))}
@@ -38,25 +42,25 @@ const AdminJobCard = ({ data,handleSave }) => {
 
             {/* Show More Button */}
             {data?.skills?.length > visibleSkills && (
-              <button onClick={() => setShowAll(!showAll)} className="mt-2 text-blue-400 text-sm underline">
+              <button onClick={() => setShowAll(!showAll)} className="mt-2 text-[#4DA3FF] text-sm underline">
                 {showAll ? "Show Less" : "More"}
               </button>
             )}
           </div>
 
-          {/* Apply Button */}
-          <div className="flex justify-around gap-x-1 items-center mt-4">
-            <Button>
+          {/* Apply & Save Buttons */}
+          <div className="flex justify-around gap-x-2 items-center mt-4">
+            <Button className="bg-[#28A745] hover:bg-[#218838] text-white">
               <Link to={data.link}>Apply</Link>
             </Button>
-                      <Button onClick={()=>{handleSave(data?._id)}} >
-                        Save for Later
-                      </Button>
+            <Button onClick={() => handleSave(data?._id)} className="bg-[#FF9F1C] hover:bg-[#E08E00] text-white">
+              Save for Later
+            </Button>
           </div>
 
         </div>
       </div>
-    </Pattern1>
+    
   );
 };
 

@@ -4,33 +4,33 @@ import { Pattern1 } from "../components/Background";
 import Button from "../components/Button";
 import { calculateDays } from "../utils/calculateDays";
 
-const JobCard = ({ data,handleRemove }) => {
+const JobCard = ({ data, handleRemove }) => {
   const [showAll, setShowAll] = useState(false);
   const visibleSkills = 4; // Number of skills shown initially
 
   return (
-    <Pattern1>
+    
       <div className="flex justify-center items-center">
-        <div className="w-[250px] sm:w-[300px] h-[350px] border border-white/20 shadow-[inset_10px_10px_10px_-1px_#4d4e4e,inset_-10px_-10px_10px_-1px_#1f2020] 
-                        rounded-lg p-4 flex flex-col justify-between">
-          
+        <div className="w-[250px] sm:w-[300px] h-[350px] rounded-lg p-4 flex flex-col justify-between border border-gray-700 shadow-lg"
+             style={{ backgroundColor: "#1A1B2F" }}>
+
           {/* Days Posted */}
-          <p className="text-white text-right text-sm">{calculateDays(data.createdAt)} Days Ago</p>
+          <p className="text-gray-400 text-right text-sm">{calculateDays(data.createdAt)} Days Ago</p>
 
           {/* Job Info */}
           <div>
-            <h2 className="text-white text-xl font-bold">{data?.name}</h2>
-            <p className="text-gray-300 text-sm">{data?.location}</p>
-            <h3 className="text-white text-lg font-semibold mt-2">{data?.role}</h3>
-            <p className="text-white text-sm">{data?.mode} | {data?.jobType}</p>
+            <h2 className="text-[#F8F9FA] text-xl font-bold">{data?.name}</h2>
+            <p className="text-[#ADB5BD] text-sm">{data?.location}</p>
+            <h3 className="text-[#F8F9FA] text-lg font-semibold mt-2">{data?.role}</h3>
+            <p className="text-[#ADB5BD] text-sm">{data?.mode} | {data?.jobType}</p>
           </div>
 
           {/* Requirements */}
           <div className="mt-0">
-            <h3 className="text-lg text-white font-semibold">Requirements</h3>
-            <ul className="text-orange-300 flex flex-wrap gap-2 md:gap-3">
+            <h3 className="text-lg text-[#F8F9FA] font-semibold">Requirements</h3>
+            <ul className="flex flex-wrap gap-2 md:gap-3">
               {data?.skills?.slice(0, showAll ? data?.skills.length : visibleSkills).map((req, index) => (
-                <li key={index} className="border-2 border-white/20 py-1 px-2 text-xs rounded-xl bg-[#1e293b] shadow-[inset_5px_5px_5px_-1px_#32435f,inset_-5px_-5px_5px_-1px_#131c2b]">
+                <li key={index} className="border border-gray-600 py-1 px-2 text-xs rounded-xl bg-gray-800 shadow-md text-[#56CFE1]">
                   {req}
                 </li>
               ))}
@@ -44,19 +44,20 @@ const JobCard = ({ data,handleRemove }) => {
             )}
           </div>
 
-          {/* Apply Button */}
+          {/* Apply & Remove Buttons */}
           <div className="flex justify-around gap-x-1 items-center mt-4">
-            <Button>
+            <Button className="bg-[#28A745] hover:bg-green-600 text-white px-4 py-2 rounded-md">
               <Link to={data.link}>Apply</Link>
             </Button>
-                      <Button onClick={()=>{handleRemove(data?._id)}} >
-                        Remove
-                      </Button>
+            <Button className="bg-[#FF9F1C] hover:bg-orange-500 text-white px-4 py-2 rounded-md"
+                    onClick={() => handleRemove(data?._id)}>
+              Remove
+            </Button>
           </div>
 
         </div>
       </div>
-    </Pattern1>
+    
   );
 };
 
