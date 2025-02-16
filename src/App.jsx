@@ -16,7 +16,7 @@ import Logout from "./components/Logout"
 import Error from "./components/Error"
 import SavedJob from "./user/SavedJob"
 import CommingSoon from "./components/CommingSoon"
-import Home2 from "./admin2/home2"
+import Home2 from "./admin2/Home2"
 const AdminProtected2 = React.lazy(() => import('./admin2/AdminProtected2'));
 const AdminJobCreate = React.lazy(() => import('./admin2/AdminJobCreate'));
 const AdminJobUpdate = React.lazy(() => import('./admin2/AdminJobUpdate'));
