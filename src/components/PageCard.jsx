@@ -7,7 +7,7 @@ const PageCard = ({ title, path, bgColor }) => {
 
   return (
     <div
-      className={`p-6 rounded-2xl shadow-lg text-white bg-teal-600  hover:scale-105 transition-transform duration-300 ease-in-out w-full max-w-[300px] min-h-[150px] flex flex-col justify-between`}
+      className={`p-6 rounded-2xl shadow-lg text-white bg-teal-600  hover:scale-105 transition-transform duration-300 ease-in-out w-full max-w-[300px] min-h-[150px] flex flex-col justify-between items-center`}
     >
       <h2 className="text-2xl font-blackOps  text-center mb-4">{title}</h2>
       <Link to={path}>
