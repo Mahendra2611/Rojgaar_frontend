@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import JobCard from './JobCardd';
+import SavedJobCard from './SavedJobCard';
 import { handleRemovee } from './APIreq';
 import { useSelector } from 'react-redux';
 import { ToastContainer,toast } from 'react-toastify';
@@ -65,7 +65,7 @@ const SavedJob = () => {
       <div className='flex px-5 flex-wrap justify-center items-center gap-10'>
     
      {(filterData?.length>0) && (filterData.map((job,index)=>(
-        <JobCard key={index} data={job} handleRemove={handleRemove}/>
+        <SavedJobCard key={index} data={job} handleRemove={handleRemove}/>
      )))}
     </div>
     <ToastContainer

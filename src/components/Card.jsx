@@ -30,6 +30,7 @@ const StyledWrapper = styled.div`
     height: 180px;
     border-radius: 16px;
     overflow: hidden;
+    font-family:Luxurious Roman;
   }
 
   .wave {

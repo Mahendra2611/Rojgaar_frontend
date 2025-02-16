@@ -14,6 +14,11 @@ export default {
       fontFamily: {
         body: ['Roboto', 'sans-serif'],
         heading: ['Montserrat', 'sans-serif'],
+       
+          blackOps: ["Black Ops One", "serif"],
+          bonaNova:["Fredericka the Great","serif"],
+          Roman:["Luxurious Roman","serif"]
+       
       },
       rotate: {
         'x-30': 'rotateX(30deg)',

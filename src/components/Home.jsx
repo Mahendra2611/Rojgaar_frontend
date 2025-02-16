@@ -34,8 +34,8 @@ const Home = () => {
         {/* Hero Section */}
 
         <section className="py-5 text-center text-[#e3b341]">
-          <h1 className="text-2xl  md:text-4xl font-bold mb-4">Find Your Dream Job or Internship</h1>
-          <p className="text-lg mb-8 text-[#d4a5f3]">Create a resume in minutes and apply with one click</p>
+          <h1 className="text-xl  md:text-2xl font-blackOps  mb-4">Find Your Dream Job or Internship</h1>
+          <p className="text-lg  font-bonaNova  mb-8 text-[#d4a5f3]">Create a resume in minutes and apply with one click</p>
           {/* <div className='flex gap-2 md:gap-10 justify-center items-center sm:flex-nowrap px-2'>
           <Button ><Link to="/user/resume" className='px-1' >Resume Builder</Link></Button>
            <Button><Link to="/user/jobs" className='px-1'>Browse Jobs</Link></Button>
@@ -82,7 +82,7 @@ const Home = () => {
         {/* Key Features */}
         <section className="py-5 sm:py-10 px-2">
           <div className="flex flex-col justify-center items-center">
-            <h2 className="text-2xl text-[#e3b341] sm:text-3xl font-bold mb-2">Why Choose Us?</h2>
+            <h2 className="text-2xl text-[#e3b341] sm:text-3xl font-blackOps mb-2">Why Choose Us?</h2>
 
             <div className="relative w-full max-w-4xl">
               <div className="flex overflow-x-auto space-x-5 p-4 lg:scrollbar-hide snap-x snap-mandatory">

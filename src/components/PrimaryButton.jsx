@@ -15,6 +15,7 @@ export const PrimaryButton = ({children,onClick}) => {
   border: none;
   border-radius: 8px;
   font-size: 16px;
+  font-family:Fredericka the Great;
   cursor: pointer;
   transition: 0.3s;
   &:hover {

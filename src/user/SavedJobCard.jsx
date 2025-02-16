@@ -4,7 +4,7 @@ import { Pattern1 } from "../components/Background";
 import Button from "../components/Button";
 import { calculateDays } from "../utils/calculateDays";
 
-const JobCard = ({ data, handleRemove }) => {
+const SavedJobCard = ({ data, handleRemove }) => {
   const [showAll, setShowAll] = useState(false);
   const visibleSkills = 4; // Number of skills shown initially
 
@@ -61,4 +61,4 @@ const JobCard = ({ data, handleRemove }) => {
   );
 };
 
-export default JobCard;
+export default SavedJobCard;
