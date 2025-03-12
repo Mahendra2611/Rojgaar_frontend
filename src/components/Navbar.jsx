@@ -3,8 +3,7 @@ import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import LOGO from "../assets/logo.jpg"
 import { useNavigate } from 'react-router-dom';
-import { CustomButtonBlue } from './CustomButton';
-import { Pattern2, Pattern3 } from './Background';
+import { User } from 'lucide-react';
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
  
@@ -13,6 +12,7 @@ const Navbar = () => {
   const toggleProfileMenu = () => {navigate("/profile")};
 const user = useSelector((state)=>state.user.user)
 //console.log(isProfileMenuOpen)
+console.log(user)
   return (
    
     <nav className="bg-gray-800 p-4   w-[100vw] ">
@@ -35,12 +35,18 @@ const user = useSelector((state)=>state.user.user)
             <Link to="user/jobs"className="text-white rounded-xl py-2 px-4 bg-[#3968ad] shadow-[inset_5px_5px_5px_-1px_#264d88,inset_-5px_-5px_5px_-1px_#5c88ca]">Jobs</Link>
             
           </div>)}
+        
           <img
-            src={user?.profile?.profilePhoto}
-            alt="Profile"
-            className="h-10 w-10 rounded-full cursor-pointer"
-            onClick={toggleProfileMenu}
-          />
+  src={user?.profile?.profilePhoto || <User className="h-10 w-10 text-gray-400 cursor-pointer border-2 border-white rounded-full" onClick={toggleProfileMenu} />}
+  alt="Profile"
+  className="h-10 w-10 rounded-full cursor-pointer object-cover border-2 border-white"
+  onClick={toggleProfileMenu}
+  onError={(e) => (e.target.style.display = <User className="h-10 w-10 text-gray-400 cursor-pointer border-2 border-white rounded-full" onClick={toggleProfileMenu} />)} // Hide broken image
+/>
+
+{/* {!user?.profile?.profilePhoto && (
+  <User className="h-10 w-10 text-gray-400 cursor-pointer border-2 border-white rounded-full" onClick={toggleProfileMenu} />
+)} */}
           <div className="md:hidden ml-4">
             <button
               onClick={toggleMenu}

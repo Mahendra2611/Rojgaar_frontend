@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { toast, ToastContainer } from "react-toastify";
+import toast from "react-hot-toast";
 import 'react-toastify/dist/ReactToastify.css';
 import { toggleLoader } from "../redux/loaderSlice"; 
 import { addUser } from "../redux/userSlice"; 
@@ -51,9 +51,7 @@ const Signin = () => {
       if (response.ok) {
         sessionStorage.clear();
         dispatch(addUser(data.user));
-        if (data.user.role === "recruiter") {
-          navigate("/admin/home");
-        } else if (data.user.role === "student") {
+       if (data?.user?.role === "student") {
           navigate("/");
         } 
         else if(data.user.role === "admin"){
@@ -141,18 +139,7 @@ const Signin = () => {
           </button>
         </div>
       </div>
-      <ToastContainer
-        position="top-right"
-        autoClose={2000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover={false}
-        theme="light"
-      />
+     
     </div>
   );
 };
