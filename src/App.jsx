@@ -7,7 +7,7 @@ import Loader from "./components/Loader"
 import React, { Suspense } from "react"
 import EditProfile from "./components/EditProfile"
  
-
+import { Toaster } from "react-hot-toast";
 import Profile from "./components/Profile"
 import Parent from "./Parent"
 
@@ -135,8 +135,13 @@ const AppRouter = createBrowserRouter([
 
 ])
   return (
-   <RouterProvider router={AppRouter}/>
+    <>
+    <Toaster position="bottom-right" reverseOrder={false} />
+    <RouterProvider router={AppRouter}/></>
   )
 }
 
 export default App
+
+
+

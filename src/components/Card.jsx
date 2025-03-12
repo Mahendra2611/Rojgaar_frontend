@@ -22,12 +22,12 @@ const Card = ({heading,text}) => {
 
 const StyledWrapper = styled.div`
   .e-card {
-    margin: 10px auto;
+    margin: 0px 10px;
     background: transparent;
     box-shadow: 0px 8px 28px -9px rgba(0,0,0,0.45);
     position: relative;
     width: 280px;
-    height: 180px;
+    height: 100px;
     border-radius: 16px;
     overflow: hidden;
     font-family:Luxurious Roman;
@@ -55,7 +55,7 @@ const StyledWrapper = styled.div`
     text-align: center;
     font-size: 20px;
     position: absolute;
-    top: 1.6em;
+    top: 0.2em;
     left: 0;
     right: 0;
     color: rgb(255, 255, 255);

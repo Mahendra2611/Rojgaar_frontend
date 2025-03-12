@@ -32,7 +32,7 @@ const handleEdit = ()=>{
   return   showPopup ? <Popup onClose={() => setShowPopup(false)} />:(
    <div className='mx-2 my-2'>
      <div
-      className="p-6 max-w-4xl mx-auto rounded-lg   shadow-[inset_10px_10px_10px_-1px_#4d4e4e,inset_-10px_-10px_10px_-1px_#1f2020]">
+      className="p-6  max-w-4xl mx-auto rounded-lg   shadow-[inset_10px_10px_10px_-1px_#4d4e4e,inset_-10px_-10px_10px_-1px_#1f2020]">
       <div className="flex justify-end">
         <button onClick={handleEdit} className="text-white bg-[#3968ad] shadow-[inset_5px_5px_5px_-1px_#264d88,inset_-5px_-5px_5px_-1px_#5c88ca rounded-xl py-1 md:py-2 px-2 md:px-4">
           Edit

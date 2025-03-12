@@ -8,7 +8,7 @@ export const handleSavee = async(jobId)=>{
       credentials:"include",
      })
      const data  = await response.json();
-    // console.log(data.message)
+    
     return data.message
   } catch (error) {
     //console.log(error(
